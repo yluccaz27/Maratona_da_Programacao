@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <p class="texto_topo">Maratona de Programação Anhanguera</p>
+        <nav class="nav-menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="#">Edital</a>
+          <a href="#">Inscrições</a>
+          <a href="#">Sobre nós</a>
+        </nav>
+      </header>
+      <main>
+        <div><h1 class="texto_sobre">Sobre nós!</h1></div>
+        <section class="sobre_lucca">
+        
+        <div class="lucca"><p>Me chamo Lucca e Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente atuando como Técnico de T.I 
+            Suporte N2 na empresa Positivo Tecnologia. 
+            Nerdola nas horas vagas, apaixonado por Jesus Cristo, Berserk, Atletico Mineiro e Pain Gaming. </p></div>
+            
+            <div><img class="imagem_lucca" src="Images/lucca.jpg" alt=""></div></section>
+      </main>
+
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('menu');
+          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+      </script>
+    
+</body>
+</html>

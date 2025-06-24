@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maratona da Programação</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="Home">
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <p class="texto_topo">Maratona de Programação Anhanguera</p>
+    <nav class="nav-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="#">Edital</a>
+      <a href="#">Inscrições</a>
+      <a href="#">Sobre nós</a>
+    </nav>
+  </header>
+
+  <main>
+        <section class="background_image"><img  class = "Imagem_Anhanguera" src="Images/MARATONA.jpg" alt="Imagem ilustrativa de uma pop-up escrito maratona de programação anhanguera"></section>
+        <h1>
+          <section>
+            <p class="titulo_hub">BEM VINDOS A MARATONA DE PROGRAMAÇÃO DA ANHANGUERA 2025!</p>
+          </section>
+        </h1>
+        <section class="texto_hub">
+          <h2 class="titulo_maratona">O que é a Maratona de Programação?</h2>
+          <p class="texto_maratona">
+            A Maratona de Programação é mais do que uma competição — é um verdadeiro desafio entre mentes criativas! Durante algumas horas intensas, os participantes encaram problemas que exigem lógica, raciocínio rápido, trabalho em equipe e, claro, muita programação.
+        
+            Imagina juntar uma galera que curte código, colocar todo mundo pra resolver enigmas e bugs contra o relógio, com café na mão e adrenalina no ar. É isso! A maratona transforma a sala de aula em um campo de batalha intelectual, onde cada solução é uma vitória e cada linha de código conta.
+        
+            Não importa se você é iniciante ou já manda bem nos algoritmos: a experiência é uma chance de aprender, testar seus limites, se divertir e viver um pouco do que é ser um programador na prática — com pressão, criatividade e aquela sensação boa de missão cumprida.
+        
+            Se você gosta de desafios e quer colocar suas habilidades à prova, a Maratona de Programação é o seu lugar!
+          </p>
+        
+          <button class="botao_texto_maratona">
+            Faça sua inscrição aqui! <a href="inscricoes.html"></a>
+          </button>
+        </section>
+        </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>

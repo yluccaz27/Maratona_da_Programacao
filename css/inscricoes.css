@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color:  #eaebecfa;
+    padding-top: 53.2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffd47d46;
+    height: 1200px;
+
+  }
+header {
+    position: fixed;       /* Fixa no topo */
+    top: 0;                /* Grudado no topo */
+    left: 0;               /* Grudado na esquerda */
+    width: 100%;  
+    height: auto;         /* Ocupa toda a largura */
+    z-index: 999;         /* Fica acima dos outros elementos */
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+  }
+
+.menu-icon {
+  font-size: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 2px;
+  user-select: none;
+  color: white;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu escondido por padrão */
+/* ---------------------------------------TOPO-------------------------------------------*/
+.nav-menu {
+  display: none;
+  flex-direction: row;
+  background-color: #005fc5;
+  font-family: 'Bungee', Arial, Helvetica, sans-serif;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+/* Estilo dos links */
+.nav-menu a {
+  padding:  12.8px 32px;
+  color: white;
+  text-decoration: none;
+  border-left: 1px solid #005bbf;
+}
+.nav-menu a:first-child {
+  border-left: none;
+}
+.nav-menu a:hover {
+  background-color: #004aad;
+  border-radius: 5px;
+  color: #ff914d;
+}
+.texto_topo{
+ display: block;
+ text-align: center;
+ font-family: 'Bungee', Arial, Helvetica, sans-serif;
+ color: #f0f0f0;
+ box-shadow: white;
+ text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.377);
+}
+/* ---------------------------------------Inscrições-------------------------------------------*/
+.texto_inscricao{
+    display: block;
+    text-align: center;
+    background-color: #004badda;
+    color: #ff914d;
+    height: 40px;
+    width: 100%;          /* faz o h2 ocupar toda a largura do bloco pai */
+    box-sizing: border-box; /* padding/borda não alteram largura total */
+    padding: 5px 0px;
+}
+/* Container que mantém proporção (ex.: 4:3) */
+.form-container {
+    position: relative;
+    width: 100%;
+    /* Se quiser 4:3, use 75%. Para 16:9, use 56.25%. 
+       Aqui vamos usar 75% ("altura = 75% da largura") como exemplo: */
+    padding-bottom: 55%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+  }
+  .botao_texto_voltar {
+  display: block;                /* faz com que o botão ocupe só o tamanho do conteúdo */
+  width: max-content;            /* ajusta a largura ao texto, sem esticar totalmente */
+  margin: 10px auto 40px auto;   /* 20px acima, auto nas laterais (centraliza), 40px abaixo */
+  padding: 10px 24px;            /* espaçamento interno */
+  background-color: #004badda;
+  color: #ff914d;
+  font-family: 'Bungee', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .botao_texto_voltar:hover {
+    background-color: #003783;
+    color: #ffd37d;
+  }
+  /* ---------------------------------------Responsividade-------------------------------------------*/
+@media (max-width: 768px) {
+    .nav-menu {
+      display: none;               /* oculto até o clique */
+      flex-direction: column;      /* empilha os links */
+      align-items: stretch;        /* cada link ocupa 100% da largura */
+      width: 100%;                /* usa 100% da viewport */
+      box-sizing: border-box;      /* padding/borda não aumentam largura */
+      position: fixed;             /* fixo abaixo do header */
+      top: 40px;                   /* ajuste conforme a altura real do seu header */
+      left: 0;
+      background-color: #005fc5;
+      padding: 0;                  
+      z-index: 998;
+      overflow-x: hidden;     
+           /* impede scroll lateral */
+    }
+    .form-container {
+        /* Aumenta a proporção para deixá-lo mais “alto” no celular */
+        padding-bottom: 120%;
+        }
+    .nav-menu a {
+      display: block;              /* ocupa toda a largura disponível */
+      width: 100%;
+      padding: 10px 0;             /* 12px em cima/baixo, sem lateral */
+      font-size: 1rem;
+      text-align: center;
+      border-left: none;           
+      border-top: 1px solid #004aad;
+      box-sizing: border-box;      /* impede overflow interno */
+      color: white;
+      text-decoration: none;
+    }
+    body{
+        height: 768px;
+    }
+}
+@media(max-width: 1200px) {
+    body{
+        height: 1200px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona de Programação</title>
+    <link rel="stylesheet" href="css/inscricoes.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <p class="texto_topo">Maratona de Programação Anhanguera</p>
+        <nav class="nav-menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="#">Edital</a>
+          <a href="inscricoes.html">Inscrições</a>
+          <a href="#">Sobre nós</a>
+        </nav>
+      </header>
+      <main>
+        <section>
+            <h1 class="texto_inscricao">Faça sua inscrição:</h1>
+          
+            <!-- Container “responsivo” para o iframe -->
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdb68u3HyvzAHAU5UW5Z6dZRu63C2QBQYxhslLQL-6wgM3ieA/viewform?embedded=true" 
+                width="640" 
+                height="895" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Carregando…
+                </iframe>
+            </div>
+          </section>
+
+          <button class="botao_texto_voltar">
+            Voltar <a href="index.html"></a>
+          </button>
+
+      </main>
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('menu');
+          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+      </script>
+</body>
+</html>
