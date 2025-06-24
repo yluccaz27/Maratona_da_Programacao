@@ -1,31 +1,42 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&display=swap');
 
-* {
+:root {
+  --cor-principal: #004aad;
+  --cor-secundaria: #ff914d;
+  --cor-fundo: #eaebecfa;
+  --cor-clara: #ffffff;
+  --cor-escura: #000000;
+  --sombra: 0 4px 16px rgba(0,0,0,0.15);
+  --raio-borda: 16px;
+}
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* CORPO */
   body {
     font-family: Arial, sans-serif;
-    background-color:  #eaebecfa;
-    padding-top: 53px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #eaebecfa;
+    padding-top: 60px;               /* espaço para header fixo */
   }
-header {
+  
+  /* HEADER FIXO */
+  header {
     position: fixed;       /* Fixa no topo */
     top: 0;                /* Grudado no topo */
     left: 0;               /* Grudado na esquerda */
     width: 100%;  
     height: auto;         /* Ocupa toda a largura */
     z-index: 999;         /* Fica acima dos outros elementos */
-    background-color: #007BFF;
+    background-color: var(--cor-principal);
     color: white;
     padding: 1rem;
   }
-
-.menu-icon {
+  
+  .menu-icon {
   font-size: 35px;
   cursor: pointer;
   position: absolute;
@@ -35,75 +46,150 @@ header {
   color: white;
   z-index: 2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Menu escondido por padrão */
-/* ---------------------------------------TOPO-------------------------------------------*/
-.nav-menu {
-  display: none;
-  flex-direction: row;
-  background-color: #005fc5;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  width: 100%;
-  justify-content: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-}
-
-/* Estilo dos links */
-.nav-menu a {
-  padding:  12.8px 32px;
-  color: white;
-  text-decoration: none;
-  border-left: 1px solid #005bbf;
-}
-
-.nav-menu a:first-child {
-  border-left: none;
-}
-.nav-menu a:hover {
-  background-color: #004aad;
-  border-radius: 5px;
-  color: #ff914d;
-}
-.texto_topo{
- display: block;
- text-align: center;
- font-family: 'Bungee', Arial, Helvetica, sans-serif;
- color: #f0f0f0;
- box-shadow: white;
- text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.377);
-}
-/* ---------------------------------------Corpo-------------------------------------------*/
-.texto_sobre{
-    display: block;
+  }
+  
+  .texto_topo {
     text-align: center;
-    background-color: #004badda;
-    color: #ff914d;
-    height: 40px;
-    width: 100%;          /* faz o h2 ocupar toda a largura do bloco pai */
-    box-sizing: border-box; /* padding/borda não alteram largura total */
-    padding: 3px 0px;
-}
-.sobre_lucca{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-  .lucca {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    text-align: center;
-    color: #000000;
-    flex: 8;
-    display: flex;
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  /* NAV MENU */
+  .nav-menu {
+    display: none;
+    flex-direction: row;
+    background-color: var(--cor-principal);
+    font-family: 'Bungee', Arial, Helvetica, sans-serif;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    top: 100%;
+    left: 0;
+    z-index: 1;
   }
-  .imagem_lucca {
-    max-width: 180px;
-    height: 180px;
+  
+  /* Estilo dos links */
+  .nav-menu a {
+    padding:  12.8px 32px;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid var(--cor-principal);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu a:first-child {
+    border-left: none;
+  }
+  .nav-menu a:hover {
+    background-color: #004aad;
+    border-radius: 15px;
+    color: var(--cor-secundaria);
+  }
+  .texto_topo{
+   display: block;
+   text-align: center;
+   font-family: 'Bungee', Arial, Helvetica, sans-serif;
+   color: #f0f0f0;
+   box-shadow: white;
+   text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.377);
+  }
+/* SEÇÃO SOBRE NÓS */
+.texto_hub {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
+.texto_sobre {
+  font-family: 'Bungee', sans-serif;
+  color: var(--cor-secundaria);
+  background-color: var(--cor-principal);
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+/* CONTAINER DE PERFIS */
+.sobre-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CADA PERFIL */
+.perfil {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+}
+
+.imagem_perfil {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.perfil-texto {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perfil-texto h2 {
+  margin-bottom: 0.5rem;
+  color: var(--cor-principal);
+  text-align: center;
+}
+
+.perfil-texto p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #333;
+}
+.social-link{
+  text-align: center;
+}
+.social-link img {
+  width: 55px;
+  height: 55px;
+  border-radius: 40%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.social-link img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
   }
+
+  header { padding: 0.75rem; }
+  .menu-icon { top: 0.75rem; }
+  .texto_topo { font-size: 1rem; }
+}

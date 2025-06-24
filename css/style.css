@@ -1,31 +1,42 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&display=swap');
 
-* {
+:root {
+  --cor-principal: #004aad;
+  --cor-secundaria: #ff914d;
+  --cor-fundo: #eaebecfa;
+  --cor-clara: #ffffff;
+  --cor-escura: #000000;
+  --sombra: 0 4px 16px rgba(0,0,0,0.15);
+  --raio-borda: 16px;
+}
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* CORPO */
   body {
     font-family: Arial, sans-serif;
-    background-color:  #eaebecfa;
-    padding-top: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #eaebecfa;
+    padding-top: 60px;               /* espaço para header fixo */
   }
-header {
+  
+  /* HEADER FIXO */
+  header {
     position: fixed;       /* Fixa no topo */
     top: 0;                /* Grudado no topo */
     left: 0;               /* Grudado na esquerda */
     width: 100%;  
     height: auto;         /* Ocupa toda a largura */
     z-index: 999;         /* Fica acima dos outros elementos */
-    background-color: #007BFF;
+    background-color: var(--cor-principal);
     color: white;
     padding: 1rem;
   }
-
-.menu-icon {
+  
+  .menu-icon {
   font-size: 35px;
   cursor: pointer;
   position: absolute;
@@ -35,183 +46,165 @@ header {
   color: white;
   z-index: 2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Menu escondido por padrão */
-/* ---------------------------------------TOPO-------------------------------------------*/
-.nav-menu {
-  display: none;
-  flex-direction: row;
-  background-color: #005fc5;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  width: 100%;
-  justify-content: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-}
-
-/* Estilo dos links */
-.nav-menu a {
-  padding:  12.8px 32px;
-  color: white;
-  text-decoration: none;
-  border-left: 1px solid #005bbf;
-}
-
-.nav-menu a:first-child {
-  border-left: none;
-}
-.nav-menu a:hover {
-  background-color: #004aad;
-  border-radius: 5px;
-  color: #ff914d;
-}
-.texto_topo{
- display: block;
- text-align: center;
- font-family: 'Bungee', Arial, Helvetica, sans-serif;
- color: #f0f0f0;
- box-shadow: white;
- text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.377);
-}
-/* ---------------------------------------Imagem-------------------------------------------*/
-.background_image{
-margin: 0;
-padding: 0;
-background-color: #eaebecfa;
-}
-.Imagem_Anhanguera{
-  display: block;
-  padding: 20px 20PX 5px 20PX;
-  margin: 30px auto 0px auto;              /* centraliza horizontalmente */
-  max-width: 100%;      /* ou 100% para responsivo */
-  width: 1200px;         /* reduz o tamanho */
-  height: auto;       /* mantém proporção */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* sombra leve */
-  background-color:  #eaebecfa;
   }
-  /* ---------------------------------------Corpo e Texto-------------------------------------------*/
-.titulo_hub{
-  background-color:#004aad;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  color:  #ff914d;
-  width: auto;
-  height: auto;
-  text-align: center;
-}
-.titulo_maratona{
-  background-color:#ffffff;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color:  #000000;
-  width: auto;
-  height: auto;
-  text-align: center;
-}
-.texto_hub {
-  background-color: #f1f1f1;      /* Fundo suave */
-  padding: 10px auto;
-  margin: 10px auto;              /* centraliza horizontalmente */
-  max-width: 95%;                 /* até 95% da largura da tela */
-  /* Se preferir valor fixo maior: max-width: 1100px; */
-  border-radius: 10px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: justify;            /* texto justificado dentro da caixa */
-  box-sizing: border-box;         /* padding interno não aumenta a largura total */
+  
+  .texto_topo {
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  /* NAV MENU */
+  .nav-menu {
+    display: none;
+    flex-direction: row;
+    background-color: var(--cor-principal);
+    font-family: 'Bungee', Arial, Helvetica, sans-serif;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding-bottom: 15px;
+  }
+  
+  /* Estilo dos links */
+  .nav-menu a {
+    padding:  12.8px 32px;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid #005bbf;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu a:first-child {
+    border-left: none;
+  }
+  .nav-menu a:hover {
+    background-color: #004aad;
+    border-radius: 15px;
+    color: var(--cor-secundaria);
+  }
+  .texto_topo{
+   display: block;
+   text-align: center;
+   font-family: 'Bungee', Arial, Helvetica, sans-serif;
+   color: #f0f0f0;
+   box-shadow: white;
+   text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.377);
+  }
+
+.hero {
+  width: 100%;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-fundo);
 }
 
-/* Título dentro da caixa, centralizado */
+.hero img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
+}
+
+.titulo_hub {
+  font-size: 2rem;
+  color: var(--cor-secundaria);
+  background-color: var(--cor-principal);
+  padding: 20px;
+  text-align: center;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
+  margin: 40px auto 30px;
+  max-width: 90%;
+  font-family: 'Bungee', cursive;
+}
+
 .titulo_maratona {
-  background-color: #ffffff;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  color: #000000;
+  font-family: 'Bungee', cursive;
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+  font-size: 1.6rem;
   text-align: center;
-  padding: 10px 0;
-  margin-bottom: 20px;            /* espaço entre título e parágrafo */
-  border-radius: 5px;
-  box-sizing: border-box;
+  padding: 16px;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
 }
 
-/* Parágrafo de corpo, mantendo justificado e espaçamento */
-.texto_maratona {
-  margin-bottom: 30px;            /* cria um espaço antes do botão */
+section.texto_hub {
+  background-color: var(--cor-clara);
+  padding: 35px;
+  margin: 0 auto 50px;
+  max-width: 950px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
   text-align: justify;
+  font-size: 1.1rem;
 }
 
-/* =========================================
-   Botão de inscrição (.botao_texto_maratona)
-   ========================================= */
 .botao_texto_maratona {
-  display: block;          /* permite centralizar com margin */
-  background-color: #004aad;
-  color: #ff914d;
-  padding: 15px 30px;             
-  margin: 0 auto;    
-  width: max-content;          
-  border: none;
-  border-radius: 10px;
+  display: block;
+  margin: 30px auto 0;
+  padding: 15px 35px;
   font-size: 1.1rem;
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
-  line-height: 1.2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
+  font-weight: bold;
+  color: var(--cor-secundaria);
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: var(--raio-borda);
   text-align: center;
-  text-decoration: none;          /* remove sublinhado se for <a> */
-  box-sizing: border-box;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: 'Bungee', cursive;
+  text-decoration: none;
+  box-shadow: var(--sombra);
+  transition: all 0.3s ease;
 }
+
 .botao_texto_maratona:hover {
   background-color: #003783;
   color: #ffd37d;
+  transform: scale(1.05);
 }
-html, body {
-  overflow-x: hidden;
+
+footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
 }
-/* ---------------------------------------Responsividade-------------------------------------------*/
+
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;               /* oculto até o clique */
-    flex-direction: column;      /* empilha os links */
-    align-items: stretch;        /* cada link ocupa 100% da largura */
-    width: 100%;                /* usa 100% da viewport */
-    box-sizing: border-box;      /* padding/borda não aumentam largura */
-    position: fixed;             /* fixo abaixo do header */
-    top: 40px;                   /* ajuste conforme a altura real do seu header */
-    left: 0;
-    background-color: #005fc5;
-    padding: 0;                  
-    z-index: 998;
-    overflow-x: hidden;          /* impede scroll lateral */
+  .menu-icon {
+    display: block;
   }
 
-  .nav-menu a {
-    display: block;              /* ocupa toda a largura disponível */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-principal);
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    padding: 10px 0;             /* 12px em cima/baixo, sem lateral */
-    font-size: 1rem;
-    text-align: center;
-    border-left: none;           
-    border-top: 1px solid #004aad;
-    box-sizing: border-box;      /* impede overflow interno */
-    color: white;
-    text-decoration: none;
+    padding: 15px 0;
+    z-index: 100;
   }
-}
-@media (min-width: 1200px) {
-  .texto_hub{
-    background-color: #f1f1f1;     /* Fundo suave */
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 1200px;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: justify;
-   }
+
+  .nav-menu.ativo {
+    display: flex;
+  }
 }

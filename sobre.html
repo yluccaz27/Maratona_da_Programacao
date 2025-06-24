@@ -1,39 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós</title>
-    <link rel="stylesheet" href="css/sobre.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nós – Maratona de Programação Anhanguera</title>
+  <link rel="stylesheet" href="css/sobre.css" />
 </head>
-<body>
-    <header>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <p class="texto_topo">Maratona de Programação Anhanguera</p>
-        <nav class="nav-menu" id="menu">
-          <a href="index.html">Home</a>
-          <a href="#">Edital</a>
-          <a href="#">Inscrições</a>
-          <a href="#">Sobre nós</a>
-        </nav>
-      </header>
-      <main>
-        <div><h1 class="texto_sobre">Sobre nós!</h1></div>
-        <section class="sobre_lucca">
-        
-        <div class="lucca"><p>Me chamo Lucca e Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente atuando como Técnico de T.I 
-            Suporte N2 na empresa Positivo Tecnologia. 
-            Nerdola nas horas vagas, apaixonado por Jesus Cristo, Berserk, Atletico Mineiro e Pain Gaming. </p></div>
-            
-            <div><img class="imagem_lucca" src="Images/lucca.jpg" alt=""></div></section>
-      </main>
+<body class="page-sobre">
 
-      <script>
-        function toggleMenu() {
-          const menu = document.getElementById('menu');
-          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-      </script>
-    
+  <!-- HEADER FIXO -->
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <p class="texto_topo">Maratona de Programação Anhanguera</p>
+    <nav class="nav-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="edital.html">Edital</a>
+      <a href="inscricoes.html">Inscrições</a>
+      <a href="sobre.html">Sobre nós</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre" class="texto_hub">
+      <h1 class="texto_sobre">Sobre Nós</h1>
+
+      <div class="sobre-container">
+        <!-- Perfil do Lucca -->
+        <article class="perfil">
+          <img src="Images/lucca.jpg" alt="Foto do Lucca" class="imagem_perfil" />
+            <div class="perfil-texto">
+              <h2>Lucca</h2>
+              <p>Hello World! Me chamo Lucca e sou estudante de Análise e Desenvolvimento de Sistemas, atualmente atuando como Técnico de T.I (Suporte N2) na empresa Positivo Tecnologia. <br> Nerdola nas horas vagas, apaixonado por Jesus Cristo, Berserk, Atlético Mineiro e Pain Gaming.</p>
+                    <div class="social-link">
+                      <a href="https://instagram.com/yluccaz_" target="_blank" class="social-link">
+                        <img src="Images/instagram.svg" alt="Instagram">
+                      </a>
+                      <a href="https://github.com/yluccaz27" target="_blank" class="social-link">
+                        <img src="Images/github.svg" alt="github">
+                      </a>
+                      <a href="https://www.linkedin.com/in/luccadeoliveirasilva/" target="_blank" class="social-link">
+                        <img src="Images/linkedin.svg" alt="linkedin">
+                      </a>
+                  </div>
+        </article>
+
+
+        <!-- Perfil do Vic -->
+        <article class="perfil">
+          <img src="Images/vic.jpg" alt="Foto do Vic" class="imagem_perfil" />
+          <div class="perfil-texto">
+            <h2>Vic</h2>
+            <p>Oi, eu sou o Vic. Sou uma pessoa trans não-binária, estudante de Análise e Desenvolvimento de Sistemas. Sou apaixonade por games, animes, cosplay e música. <br>Meu jogo favorito é The Last of Us, e meu anime favorito é Nana (que significa 7 em japonês — também meu número favorito). <br>Toco alguns instrumentos musicais desde criança, como bateria, violão e guitarra. Já me aventurei no cavaquinho e ukulele, e atualmente estou aprendendo baixo. Tenho muita vontade de ter uma banda, por isso estudo e me dedico para realizar esse sonho.</p>
+                <div class="social-link">
+                  <a href="https://www.linkedin.com/in/vic-fonteles-810a02329/" target="_blank" class="social-link">
+                    <img src="Images/linkedin.svg" alt="linkedin">
+                  </a>
+                </div>
+          </div>
+        </article>
+
+
+        <!--Perfil do Pedro-->
+        <article class="perfil"> 
+          <img src="Images/Pedro.jpg" alt="Foto do Pedro" class="imagem_perfil">
+            <div class="perfil-texto">
+              <h2>Pedro</h2>
+              <p>Kon'nichiwa! Meu nome é Pedro Henrique e sou estudante de Análise e Desenvolvimento de Sistemas, atualmente no 3º período do curso. <br>
+                Sou apaixonado por Jesus Cristo, jogos eletrônicos, pela temática cyberpunk e pelos animes shōnen. <br>
+                Prezo pela excelência, pelo bom senso e pelo bom humor nos relacionamentos e projetos da minha vida.</p>
+                  <div class="social-link">
+                    <a href="https://www.instagram.com/opedrohenriquexvr?igsh=bm8zMHg0eDJyeml5" target="_blank" class="social-link">
+                      <img src="Images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedrohqexavier/" target="_blank" class="social-link">
+                      <img src="Images/linkedin.svg" alt="linkedin">
+                    </a>
+                  </div>
+              </div>
+          </article>
+
+      <!--Perfil do Thiago-->
+      <article class="perfil"> 
+        <img src="Images/Thago.jpg" alt="Foto do Thiago" class="imagem_perfil">
+          <div class="perfil-texto">
+            <h2>Thiago</h2>
+            <p>Thiago A. Alves é um Mestre em Metodologias para o Ensino de Linguagens e suas Tecnologias, com foco em Gamificação aplicada em Ambientes Virtuais de Aprendizagem. Atualmente, atua como docente na Faculdade Pitágoras e como Professor Substituto no CEFET-MG, buscando integrar ferramentas que impulsionem o ensino e a aprendizagem. Com vasta experiência em Análise de Sistemas, Gestão de Projetos e Scrum, Thiago é um estudioso de jogos, processos lúdicos e gamificação, além de ser um grande apreciador de jogos de tabuleiro e videogames.</p>
+                  <a href="https://www.linkedin.com/in/thiago-a-alves-46878772/" target="_blank" class="social-link">
+                    <img src="Images/linkedin.svg" alt="linkedin">
+                  </a>
+            </div>
+        </article>
+
+
+        <!--Perfil do Charles-->
+      <article class="perfil"> 
+        <img src="#" alt="Foto do Charles" class="imagem_perfil">
+          <div class="perfil-texto">
+            <h2>Charles</h2>
+            <p>#</p>
+                <div class="social-link">
+                  <a href="#" target="_blank" class="social-link">
+                    <img src="Images/linkedin.svg" alt="linkedin">
+                  </a>
+                </div>
+            </div>
+        </article>
+
+        <!--Perfil do Ivan-->
+      <article class="perfil"> 
+        <img src="#" alt="Foto do Ivan" class="imagem_perfil">
+          <div class="perfil-texto">
+            <h2>Ivan</h2>
+            <p>#</p>
+                <div class="social-link">
+                  <a href="#" target="_blank" class="social-link">
+                    <img src="Images/linkedin.svg" alt="linkedin">
+                  </a>
+                </div>
+            </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </body>
 </html>
